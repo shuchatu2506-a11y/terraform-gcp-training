@@ -38,4 +38,4 @@ jobs:
     - name: Terraform Apply (DEV)
       if: github.event_name == 'push'
       working-directory: envs/dev
-      run: terraform apply -auto-approve
+      run: terraform apply -auto-approve -var="env=dev"
